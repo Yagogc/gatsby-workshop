@@ -2,18 +2,22 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Nav from './Nav';
-// ...
+import Footer from './Footer';
+import 'normalize.css';
+import './styles/global.css';
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteData {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
   `);
-  const { title } = data.site.siteMetadata;
+  const { title, author } = data.site.siteMetadata;
 
   return (
     <>
@@ -26,6 +30,7 @@ const Layout = ({ children }) => {
         <Nav />
         {children}
       </div>
+      <Footer author={author} />
     </>
   );
 };
