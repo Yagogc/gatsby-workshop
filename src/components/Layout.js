@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Footer from './Footer';
 import 'normalize.css';
 import './styles/global.css';
+import LayoutStyles from './styles/LayoutStyles';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,7 +21,7 @@ const Layout = ({ children }) => {
   const { title, author } = data.site.siteMetadata;
 
   return (
-    <>
+    <LayoutStyles>
       <Helmet>
         <title>{data.site.siteMetadata.title}</title>
         <meta charSet="utf-8" />
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer author={author} />
-    </>
+    </LayoutStyles>
   );
 };
 
