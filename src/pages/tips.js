@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const Tips = () => (
   <Layout>
-    <h3>Hello tips</h3>;
+    <h3>Hello tips</h3>
   </Layout>
 );
 
