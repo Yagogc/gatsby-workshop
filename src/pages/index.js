@@ -1,5 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
-const Homepage = () => <h1>Hello world</h1>;
+const Homepage = () => (
+  <Layout>
+    <h3>Hello world</h3>
+  </Layout>
+);
 
 export default Homepage;
