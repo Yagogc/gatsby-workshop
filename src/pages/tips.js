@@ -11,7 +11,9 @@ const Tips = ({ data }) => {
       <ul>
         {tips.map(tip => (
           <li key={tip.id}>
-            <Link to={tip.frontmatter.slug}>{tip.frontmatter.title}</Link>
+            <Link to={`tip/${tip.frontmatter.slug}`}>
+              {tip.frontmatter.title}
+            </Link>
           </li>
         ))}
       </ul>
