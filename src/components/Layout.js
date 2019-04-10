@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import Nav from './Nav';
 // ...
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <div>
         <h1>{title}</h1>
+        <Nav />
         {children}
       </div>
     </>
