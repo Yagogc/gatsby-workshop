@@ -12,6 +12,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "@mdx-js/loader": "^0.20.3",
     "@mdx-js/mdx": "^0.20.3",
     "@mdx-js/tag": "^0.20.3",
@@ -47,7 +48,6 @@
     "url": "http://cool.com"
   },
   "devDependencies": {
-    "axios": "^0.18.0",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
